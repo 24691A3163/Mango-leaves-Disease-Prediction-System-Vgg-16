@@ -1,0 +1,205 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/App.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=533f95af"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=533f95af"; const useState = __vite__cjsImport3_react["useState"]; const useEffect = __vite__cjsImport3_react["useEffect"]; const useCallback = __vite__cjsImport3_react["useCallback"];
+import { Navbar } from "/src/components/Navbar.tsx";
+import { Footer } from "/src/components/Footer.tsx";
+import { HomePage } from "/src/pages/HomePage.tsx";
+import { PredictionPage } from "/src/pages/PredictionPage.tsx?t=1794844783510";
+import { ResultsPage } from "/src/pages/ResultsPage.tsx";
+import { DiseaseInfoPage } from "/src/pages/DiseaseInfoPage.tsx";
+import { onnxModelService } from "/src/services/onnxModelService.ts?t=1794844783510";
+export const App = () => {
+  _s();
+  const [activePage, setActivePage] = useState("home");
+  const [imageFile, setImageFile] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
+  const [predictionResult, setPredictionResult] = useState(null);
+  const [modelStatus, setModelStatus] = useState("unloaded");
+  const [modelMessage, setModelMessage] = useState("Initializing...");
+  const [modelError, setModelError] = useState(null);
+  const [classNames, setClassNames] = useState([]);
+  const loadModelSafely = useCallback(async () => {
+    try {
+      setModelStatus("loading");
+      setModelMessage("Loading VGG16 ONNX model...");
+      setModelError(null);
+      await onnxModelService.loadModel();
+      const st = onnxModelService.getStatus();
+      setModelStatus(st.status);
+      setModelMessage(st.message);
+      setModelError(st.error);
+      setClassNames(onnxModelService.getClassNames());
+    } catch (err) {
+      console.error("Failed to load model:", err);
+      setModelStatus("error");
+      setModelMessage("Model initialization failed");
+      setModelError(err instanceof Error ? err.message : String(err));
+    }
+  }, []);
+  useEffect(() => {
+    loadModelSafely();
+  }, [loadModelSafely]);
+  const handleImageSelected = (file, url) => {
+    setImageFile(file);
+    setImageUrl(url);
+    setPredictionResult(null);
+  };
+  const handlePredictionComplete = (result) => {
+    setPredictionResult(result);
+    setActivePage("results");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const handlePredictAnother = () => {
+    setActivePage("predict");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const handleViewDiseaseDetails = (_diseaseName) => {
+    setActivePage("diseases");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  return /* @__PURE__ */ jsxDEV("div", { className: "min-h-screen flex flex-col bg-slate-50 text-slate-800", children: [
+    /* @__PURE__ */ jsxDEV(
+      Navbar,
+      {
+        activePage,
+        setActivePage,
+        modelStatus,
+        modelMessage,
+        modelError,
+        onRetryModelLoad: loadModelSafely,
+        hasResults: predictionResult !== null
+      },
+      void 0,
+      false,
+      {
+        fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+        lineNumber: 93,
+        columnNumber: 7
+      },
+      this
+    ),
+    /* @__PURE__ */ jsxDEV("main", { className: "flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6", children: [
+      activePage === "home" && /* @__PURE__ */ jsxDEV(
+        HomePage,
+        {
+          onStartPrediction: () => setActivePage("predict"),
+          onViewGuide: () => setActivePage("diseases"),
+          modelStatus,
+          modelMessage,
+          modelError,
+          onRetryModelLoad: loadModelSafely,
+          classNames
+        },
+        void 0,
+        false,
+        {
+          fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+          lineNumber: 106,
+          columnNumber: 9
+        },
+        this
+      ),
+      activePage === "predict" && /* @__PURE__ */ jsxDEV(
+        PredictionPage,
+        {
+          imageFile,
+          imageUrl,
+          onImageSelected: handleImageSelected,
+          onPredictionComplete: handlePredictionComplete,
+          modelStatus,
+          modelMessage,
+          modelError,
+          onRetryModelLoad: loadModelSafely
+        },
+        void 0,
+        false,
+        {
+          fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+          lineNumber: 118,
+          columnNumber: 9
+        },
+        this
+      ),
+      activePage === "results" && predictionResult && /* @__PURE__ */ jsxDEV(
+        ResultsPage,
+        {
+          result: predictionResult,
+          imageUrl,
+          onPredictAnother: handlePredictAnother,
+          onViewDiseaseDetails: handleViewDiseaseDetails
+        },
+        void 0,
+        false,
+        {
+          fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+          lineNumber: 131,
+          columnNumber: 9
+        },
+        this
+      ),
+      activePage === "diseases" && /* @__PURE__ */ jsxDEV(
+        DiseaseInfoPage,
+        {
+          predictedClass: predictionResult?.predictedClass,
+          classNames
+        },
+        void 0,
+        false,
+        {
+          fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+          lineNumber: 140,
+          columnNumber: 9
+        },
+        this
+      )
+    ] }, void 0, true, {
+      fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+      lineNumber: 104,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Footer, {}, void 0, false, {
+      fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+      lineNumber: 148,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx",
+    lineNumber: 91,
+    columnNumber: 5
+  }, this);
+};
+_s(App, "syCE9Fcsvr6zfroCSOcCOev16h4=");
+_c = App;
+var _c;
+$RefreshReg$(_c, "App");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("E:/MY projects/MANGO LEAF DISEASE PREDICTION/src/App.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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REE7QUFFSjtBQUFFekMsR0ExSFdELEtBQWE7QUFBQSxLQUFiQTtBQUFhLElBQUEyQztBQUFBLGFBQUFBLElBQUEiLCJuYW1lcyI6WyJ1c2VTdGF0ZSIsInVzZUVmZmVjdCIsInVzZUNhbGxiYWNrIiwiTmF2YmFyIiwiRm9vdGVyIiwiSG9tZVBhZ2UiLCJQcmVkaWN0aW9uUGFnZSIsIlJlc3VsdHNQYWdlIiwiRGlzZWFzZUluZm9QYWdlIiwib25ueE1vZGVsU2VydmljZSIsIkFwcCIsIl9zIiwiYWN0aXZlUGFnZSIsInNldEFjdGl2ZVBhZ2UiLCJpbWFnZUZpbGUiLCJzZXRJbWFnZUZpbGUiLCJpbWFnZVVybCIsInNldEltYWdlVXJsIiwicHJlZGljdGlvblJlc3VsdCIsInNldFByZWRpY3Rpb25SZXN1bHQiLCJtb2RlbFN0YXR1cyIsInNldE1vZGVsU3RhdHVzIiwibW9kZWxNZXNzYWdlIiwic2V0TW9kZWxNZXNzYWdlIiwibW9kZWxFcnJvciIsInNldE1vZGVsRXJyb3IiLCJjbGFzc05hbWVzIiwic2V0Q2xhc3NOYW1lcyIsImxvYWRNb2RlbFNhZmVseSIsImxvYWRNb2RlbCIsInN0IiwiZ2V0U3RhdHVzIiwic3RhdHVzIiwibWVzc2FnZSIsImVycm9yIiwiZ2V0Q2xhc3NOYW1lcyIsImVyciIsImNvbnNvbGUiLCJFcnJvciIsIlN0cmluZyIsImhhbmRsZUltYWdlU2VsZWN0ZWQiLCJmaWxlIiwidXJsIiwiaGFuZGxlUHJlZGljdGlvbkNvbXBsZXRlIiwicmVzdWx0Iiwid2luZG93Iiwic2Nyb2xsVG8iLCJ0b3AiLCJiZWhhdmlvciIsImhhbmRsZVByZWRpY3RBbm90aGVyIiwiaGFuZGxlVmlld0Rpc2Vhc2VEZXRhaWxzIiwiX2Rpc2Vhc2VOYW1lIiwicHJlZGljdGVkQ2xhc3MiLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJBcHAudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSwgdXNlRWZmZWN0LCB1c2VDYWxsYmFjayB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IE5hdmJhciwgQWN0aXZlUGFnZSB9IGZyb20gJy4vY29tcG9uZW50cy9OYXZiYXInO1xuaW1wb3J0IHsgRm9vdGVyIH0gZnJvbSAnLi9jb21wb25lbnRzL0Zvb3Rlcic7XG5pbXBvcnQgeyBIb21lUGFnZSB9IGZyb20gJy4vcGFnZXMvSG9tZVBhZ2UnO1xuaW1wb3J0IHsgUHJlZGljdGlvblBhZ2UgfSBmcm9tICcuL3BhZ2VzL1ByZWRpY3Rpb25QYWdlJztcbmltcG9ydCB7IFJlc3VsdHNQYWdlIH0gZnJvbSAnLi9wYWdlcy9SZXN1bHRzUGFnZSc7XG5pbXBvcnQgeyBEaXNlYXNlSW5mb1BhZ2UgfSBmcm9tICcuL3BhZ2VzL0Rpc2Vhc2VJbmZvUGFnZSc7XG5pbXBvcnQgeyBvbm54TW9kZWxTZXJ2aWNlLCBNb2RlbFN0YXR1cywgUHJlZGljdGlvblJlc3VsdCB9IGZyb20gJy4vc2VydmljZXMvb25ueE1vZGVsU2VydmljZSc7XG5cbmV4cG9ydCBjb25zdCBBcHA6IFJlYWN0LkZDID0gKCkgPT4ge1xuICBjb25zdCBbYWN0aXZlUGFnZSwgc2V0QWN0aXZlUGFnZV0gPSB1c2VTdGF0ZTxBY3RpdmVQYWdlPignaG9tZScpO1xuICBjb25zdCBbaW1hZ2VGaWxlLCBzZXRJbWFnZUZpbGVdID0gdXNlU3RhdGU8RmlsZSB8IG51bGw+KG51bGwpO1xuICBjb25zdCBbaW1hZ2VVcmwsIHNldEltYWdlVXJsXSA9IHVzZVN0YXRlPHN0cmluZyB8IG51bGw+KG51bGwpO1xuICBjb25zdCBbcHJlZGljdGlvblJlc3VsdCwgc2V0UHJlZGljdGlvblJlc3VsdF0gPSB1c2VTdGF0ZTxQcmVkaWN0aW9uUmVzdWx0IHwgbnVsbD4obnVsbCk7XG5cbiAgLy8gTW9kZWwgc3RhdHVzIHN0YXRlXG4gIGNvbnN0IFttb2RlbFN0YXR1cywgc2V0TW9kZWxTdGF0dXNdID0gdXNlU3RhdGU8TW9kZWxTdGF0dXM+KCd1bmxvYWRlZCcpO1xuICBjb25zdCBbbW9kZWxNZXNzYWdlLCBzZXRNb2RlbE1lc3NhZ2VdID0gdXNlU3RhdGU8c3RyaW5nPignSW5pdGlhbGl6aW5nLi4uJyk7XG4gIGNvbnN0IFttb2RlbEVycm9yLCBzZXRNb2RlbEVycm9yXSA9IHVzZVN0YXRlPHN0cmluZyB8IG51bGw+KG51bGwpO1xuICBjb25zdCBbY2xhc3NOYW1lcywgc2V0Q2xhc3NOYW1lc10gPSB1c2VTdGF0ZTxzdHJpbmdbXT4oW10pO1xuXG4gIC8vIEluaXRpYWxpemUgYW5kIGxvYWQgdGhlIG1vZGVsIG9uIGFwcGxpY2F0aW9uIG1vdW50XG4gIGNvbnN0IGxvYWRNb2RlbFNhZmVseSA9IHVzZUNhbGxiYWNrKGFzeW5jICgpID0+IHtcbiAgICB0cnkge1xuICAgICAgc2V0TW9kZWxTdGF0dXMoJ2xvYWRpbmcnKTtcbiAgICAgIHNldE1vZGVsTWVzc2FnZSgnTG9hZGluZyBWR0cxNiBPTk5YIG1vZGVsLi4uJyk7XG4gICAgICBzZXRNb2RlbEVycm9yKG51bGwpO1xuXG4gICAgICBhd2FpdCBvbm54TW9kZWxTZXJ2aWNlLmxvYWRNb2RlbCgpO1xuXG4gICAgICBjb25zdCBzdCA9IG9ubnhNb2RlbFNlcnZpY2UuZ2V0U3RhdHVzKCk7XG4gICAgICBzZXRNb2RlbFN0YXR1cyhzdC5zdGF0dXMpO1xuICAgICAgc2V0TW9kZWxNZXNzYWdlKHN0Lm1lc3NhZ2UpO1xuICAgICAgc2V0TW9kZWxFcnJvcihzdC5lcnJvcik7XG4gICAgICBzZXRDbGFzc05hbWVzKG9ubnhNb2RlbFNlcnZpY2UuZ2V0Q2xhc3NOYW1lcygpKTtcbiAgICB9IGNhdGNoIChlcnI6IHVua25vd24pIHtcbiAgICAgIGNvbnNvbGUuZXJyb3IoJ0ZhaWxlZCB0byBsb2FkIG1vZGVsOicsIGVycik7XG4gICAgICBzZXRNb2RlbFN0YXR1cygnZXJyb3InKTtcbiAgICAgIHNldE1vZGVsTWVzc2FnZSgnTW9kZWwgaW5pdGlhbGl6YXRpb24gZmFpbGVkJyk7XG4gICAgICBzZXRNb2RlbEVycm9yKGVyciBpbnN0YW5jZW9mIEVycm9yID8gZXJyLm1lc3NhZ2UgOiBTdHJpbmcoZXJyKSk7XG4gICAgfVxuICB9LCBbXSk7XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBsb2FkTW9kZWxTYWZlbHkoKTtcbiAgfSwgW2xvYWRNb2RlbFNhZmVseV0pO1xuXG4gIGNvbnN0IGhhbmRsZUltYWdlU2VsZWN0ZWQgPSAoZmlsZTogRmlsZSB8IG51bGwsIHVybDogc3RyaW5nIHwgbnVsbCkgPT4ge1xuICAgIHNldEltYWdlRmlsZShmaWxlKTtcbiAgICBzZXRJbWFnZVVybCh1cmwpO1xuICAgIC8vIFJlc2V0IGFueSBwcmV2aW91cyBwcmVkaWN0aW9uIHJlc3VsdCB3aGVuIG5ldyBpbWFnZSBpcyBwaWNrZWRcbiAgICBzZXRQcmVkaWN0aW9uUmVzdWx0KG51bGwpO1xuICB9O1xuXG4gIGNvbnN0IGhhbmRsZVByZWRpY3Rpb25Db21wbGV0ZSA9IChyZXN1bHQ6IFByZWRpY3Rpb25SZXN1bHQpID0+IHtcbiAgICBzZXRQcmVkaWN0aW9uUmVzdWx0KHJlc3VsdCk7XG4gICAgc2V0QWN0aXZlUGFnZSgncmVzdWx0cycpO1xuICAgIHdpbmRvdy5zY3JvbGxUbyh7IHRvcDogMCwgYmVoYXZpb3I6ICdzbW9vdGgnIH0pO1xuICB9O1xuXG4gIGNvbnN0IGhhbmRsZVByZWRpY3RBbm90aGVyID0gKCkgPT4ge1xuICAgIHNldEFjdGl2ZVBhZ2UoJ3ByZWRpY3QnKTtcbiAgICB3aW5kb3cuc2Nyb2xsVG8oeyB0b3A6IDAsIGJlaGF2aW9yOiAnc21vb3RoJyB9KTtcbiAgfTtcblxuICBjb25zdCBoYW5kbGVWaWV3RGlzZWFzZURldGFpbHMgPSAoX2Rpc2Vhc2VOYW1lOiBzdHJpbmcpID0+IHtcbiAgICBzZXRBY3RpdmVQYWdlKCdkaXNlYXNlcycpO1xuICAgIHdpbmRvdy5zY3JvbGxUbyh7IHRvcDogMCwgYmVoYXZpb3I6ICdzbW9vdGgnIH0pO1xuICB9O1xuXG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJtaW4taC1zY3JlZW4gZmxleCBmbGV4LWNvbCBiZy1zbGF0ZS01MCB0ZXh0LXNsYXRlLTgwMFwiPlxuICAgICAgey8qIE5hdmlnYXRpb24gKi99XG4gICAgICA8TmF2YmFyXG4gICAgICAgIGFjdGl2ZVBhZ2U9e2FjdGl2ZVBhZ2V9XG4gICAgICAgIHNldEFjdGl2ZVBhZ2U9e3NldEFjdGl2ZVBhZ2V9XG4gICAgICAgIG1vZGVsU3RhdHVzPXttb2RlbFN0YXR1c31cbiAgICAgICAgbW9kZWxNZXNzYWdlPXttb2RlbE1lc3NhZ2V9XG4gICAgICAgIG1vZGVsRXJyb3I9e21vZGVsRXJyb3J9XG4gICAgICAgIG9uUmV0cnlNb2RlbExvYWQ9e2xvYWRNb2RlbFNhZmVseX1cbiAgICAgICAgaGFzUmVzdWx0cz17cHJlZGljdGlvblJlc3VsdCAhPT0gbnVsbH1cbiAgICAgIC8+XG5cbiAgICAgIHsvKiBNYWluIENvbnRhaW5lciAqL31cbiAgICAgIDxtYWluIGNsYXNzTmFtZT1cImZsZXgtMSBtYXgtdy03eGwgdy1mdWxsIG14LWF1dG8gcHgtNCBzbTpweC02IGxnOnB4LTggcHktNlwiPlxuICAgICAgICB7YWN0aXZlUGFnZSA9PT0gJ2hvbWUnICYmIChcbiAgICAgICAgICA8SG9tZVBhZ2VcbiAgICAgICAgICAgIG9uU3RhcnRQcmVkaWN0aW9uPXsoKSA9PiBzZXRBY3RpdmVQYWdlKCdwcmVkaWN0Jyl9XG4gICAgICAgICAgICBvblZpZXdHdWlkZT17KCkgPT4gc2V0QWN0aXZlUGFnZSgnZGlzZWFzZXMnKX1cbiAgICAgICAgICAgIG1vZGVsU3RhdHVzPXttb2RlbFN0YXR1c31cbiAgICAgICAgICAgIG1vZGVsTWVzc2FnZT17bW9kZWxNZXNzYWdlfVxuICAgICAgICAgICAgbW9kZWxFcnJvcj17bW9kZWxFcnJvcn1cbiAgICAgICAgICAgIG9uUmV0cnlNb2RlbExvYWQ9e2xvYWRNb2RlbFNhZmVseX1cbiAgICAgICAgICAgIGNsYXNzTmFtZXM9e2NsYXNzTmFtZXN9XG4gICAgICAgICAgLz5cbiAgICAgICAgKX1cblxuICAgICAgICB7YWN0aXZlUGFnZSA9PT0gJ3ByZWRpY3QnICYmIChcbiAgICAgICAgICA8UHJlZGljdGlvblBhZ2VcbiAgICAgICAgICAgIGltYWdlRmlsZT17aW1hZ2VGaWxlfVxuICAgICAgICAgICAgaW1hZ2VVcmw9e2ltYWdlVXJsfVxuICAgICAgICAgICAgb25JbWFnZVNlbGVjdGVkPXtoYW5kbGVJbWFnZVNlbGVjdGVkfVxuICAgICAgICAgICAgb25QcmVkaWN0aW9uQ29tcGxldGU9e2hhbmRsZVByZWRpY3Rpb25Db21wbGV0ZX1cbiAgICAgICAgICAgIG1vZGVsU3RhdHVzPXttb2RlbFN0YXR1c31cbiAgICAgICAgICAgIG1vZGVsTWVzc2FnZT17bW9kZWxNZXNzYWdlfVxuICAgICAgICAgICAgbW9kZWxFcnJvcj17bW9kZWxFcnJvcn1cbiAgICAgICAgICAgIG9uUmV0cnlNb2RlbExvYWQ9e2xvYWRNb2RlbFNhZmVseX1cbiAgICAgICAgICAvPlxuICAgICAgICApfVxuXG4gICAgICAgIHthY3RpdmVQYWdlID09PSAncmVzdWx0cycgJiYgcHJlZGljdGlvblJlc3VsdCAmJiAoXG4gICAgICAgICAgPFJlc3VsdHNQYWdlXG4gICAgICAgICAgICByZXN1bHQ9e3ByZWRpY3Rpb25SZXN1bHR9XG4gICAgICAgICAgICBpbWFnZVVybD17aW1hZ2VVcmx9XG4gICAgICAgICAgICBvblByZWRpY3RBbm90aGVyPXtoYW5kbGVQcmVkaWN0QW5vdGhlcn1cbiAgICAgICAgICAgIG9uVmlld0Rpc2Vhc2VEZXRhaWxzPXtoYW5kbGVWaWV3RGlzZWFzZURldGFpbHN9XG4gICAgICAgICAgLz5cbiAgICAgICAgKX1cblxuICAgICAgICB7YWN0aXZlUGFnZSA9PT0gJ2Rpc2Vhc2VzJyAmJiAoXG4gICAgICAgICAgPERpc2Vhc2VJbmZvUGFnZVxuICAgICAgICAgICAgcHJlZGljdGVkQ2xhc3M9e3ByZWRpY3Rpb25SZXN1bHQ/LnByZWRpY3RlZENsYXNzfVxuICAgICAgICAgICAgY2xhc3NOYW1lcz17Y2xhc3NOYW1lc31cbiAgICAgICAgICAvPlxuICAgICAgICApfVxuICAgICAgPC9tYWluPlxuXG4gICAgICB7LyogRm9vdGVyICovfVxuICAgICAgPEZvb3RlciAvPlxuICAgIDwvZGl2PlxuICApO1xufTtcbiJdLCJmaWxlIjoiRTovTVkgcHJvamVjdHMvTUFOR08gTEVBRiBESVNFQVNFIFBSRURJQ1RJT04vc3JjL0FwcC50c3gifQ==

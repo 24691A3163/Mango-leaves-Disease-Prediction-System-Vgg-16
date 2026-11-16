@@ -1,0 +1,244 @@
+export const MANGO_DISEASES = {
+  "Anthracnose": {
+    id: "anthracnose",
+    name: "Anthracnose",
+    scientificName: "Colletotrichum gloeosporioides",
+    category: "Fungal",
+    severity: "High",
+    description: "Anthracnose is one of the most widespread and damaging fungal diseases affecting mango orchards worldwide. It attacks young leaves, flowers, twigs, and maturing fruits, leading to premature leaf drop and fruit rot.",
+    symptoms: [
+      "Small, angular, dark brown to black spots with yellow halos on young foliage",
+      "Lesions enlarge and coalesce, forming large necrotic patches",
+      "Leaves become distorted, tear along dry lesions, and drop prematurely",
+      "Black blight on blossom panicles causing flower drop"
+    ],
+    causes: [
+      "Prolonged leaf wetness and warm temperatures (24°C - 30°C)",
+      "High relative humidity above 90% during flowering and flushing",
+      "Wind-driven rain splashing fungal conidia from infected twigs"
+    ],
+    management: [
+      "Prune affected branches and destroy fallen infected leaves to reduce inoculum",
+      "Apply copper oxychloride (0.3%) or mancozeb before blossom opening",
+      "Spray systemic fungicides like carbendazim or azoxystrobin during heavy flush periods"
+    ],
+    prevention: [
+      "Maintain adequate tree spacing and canopy aeration via winter pruning",
+      "Avoid overhead sprinkler irrigation that wets leaves and flowers",
+      "Plant resistant or tolerant mango cultivars when establishing new groves"
+    ],
+    accentColor: "rose"
+  },
+  "Bacterial Canker": {
+    id: "bacterial-canker",
+    name: "Bacterial Canker",
+    scientificName: "Xanthomonas campestris pv. mangiferaeindicae",
+    category: "Bacterial",
+    severity: "Severe",
+    description: "Bacterial Canker is a severe bacterial infection causing cankers, leaf blight, and gummy exudations on mango leaves, branches, and fruits, often causing heavy crop loss.",
+    symptoms: [
+      "Water-soaked, angular, raised dark brown lesions bounded by leaf veins",
+      "Yellow halos typically surrounding angular necrotic spots",
+      "Cracking of leaf midribs with bacterial ooze under humid conditions",
+      "Staring cankers on twigs leading to branch dieback"
+    ],
+    causes: [
+      "Bacterial ingress through natural openings (stomata, lenticels) and mechanical wounds",
+      "Strong windstorms and hail driving rain into tree canopies",
+      "High temperatures coupled with frequent rainfall"
+    ],
+    management: [
+      "Spray copper hydroxide or copper oxychloride combined with streptocycline (100 ppm)",
+      "Remove severely cankered twigs and seal cuts with Bordeaux paste",
+      "Disinfect pruning tools with 70% alcohol or 10% bleach between cuts"
+    ],
+    prevention: [
+      "Establish windbreaks around orchards to minimize mechanical abrasions",
+      "Inspect nursery saplings thoroughly before orchard transplanting",
+      "Avoid handling trees when leaves and foliage are wet"
+    ],
+    accentColor: "amber"
+  },
+  "Cutting Weevil": {
+    id: "cutting-weevil",
+    name: "Cutting Weevil",
+    scientificName: "Deporaus marginatus",
+    category: "Pest",
+    severity: "Moderate",
+    description: "The Mango Leaf-Cutting Weevil is a destructive curculionid beetle. Adult females lay eggs in fresh young leaves and cleanly sever the leaf blade near the petiole, causing severe defoliation during flushing.",
+    symptoms: [
+      "Clean, scissor-like transversal cuts across the base or middle of tender leaves",
+      "Severed leaves carpeting the ground beneath the tree canopy",
+      "Stunted flush growth and bare shoot tips",
+      "Tiny puncture marks along the midrib where eggs are deposited"
+    ],
+    causes: [
+      "Adult weevils emerging from pupation in the soil during new leaf flush cycles",
+      "Dense, unpruned tree canopies providing shelter for adult beetles",
+      "Warm and humid weather coinciding with the initiation of new vegetative flushes"
+    ],
+    management: [
+      "Collect and destroy fallen cut leaves containing eggs and larvae promptly",
+      "Spray recommended insect growth regulators or neem seed kernel extract (NSKE 5%)",
+      "Apply chlorpyrifos or cypermethrin around canopy perimeter during peak adult emergence"
+    ],
+    prevention: [
+      "Rake and plow tree basins to expose pupae to solar heat and natural predators",
+      "Synchronize flush management to minimize prolonged vulnerable periods",
+      "Encourage predatory ants and birds in the orchard ecosystem"
+    ],
+    accentColor: "orange"
+  },
+  "Die Back": {
+    id: "die-back",
+    name: "Die Back",
+    scientificName: "Lasiodiplodia theobromae",
+    category: "Fungal",
+    severity: "Severe",
+    description: "Die Back is a vascular fungal disease characterized by the gradual drying and death of shoots and branches from top to bottom, often leading to partial or complete tree mortality if unmanaged.",
+    symptoms: [
+      "Leaves turn brown, wither, and dry up while remaining attached to dead twigs",
+      "Drying and discoloration progresses downward from the shoot tip to the trunk",
+      "Brownish-black internal vascular discoloration visible when twigs are split longitudinally",
+      "Gummosis and resin oozing from bark fissures on infected branches"
+    ],
+    causes: [
+      "Weakened trees stressed by drought, poor drainage, or nutritional deficiency",
+      "Fungal invasion through pruning wounds, insect borers, or sun scald injuries",
+      "High temperatures (30°C - 35°C) and water stagnation around roots"
+    ],
+    management: [
+      "Prune affected branches 5–8 cm below the boundary of diseased wood into healthy green tissue",
+      "Immediately paste cut surfaces with Bordeaux paste or copper oxychloride paint",
+      "Drench root zones and spray canopy with carbendazim or thiophanate-methyl"
+    ],
+    prevention: [
+      "Maintain balanced fertilization, especially potassium and micronutrients (zinc, boron)",
+      "Ensure proper orchard drainage to prevent waterlogging during rainy periods",
+      "Control bark borers and stem borers which create entry wounds for the fungus"
+    ],
+    accentColor: "red"
+  },
+  "Gall Midge": {
+    id: "gall-midge",
+    name: "Gall Midge",
+    scientificName: "Procontarinia matteiana",
+    category: "Pest",
+    severity: "Moderate",
+    description: "The Mango Gall Midge is a tiny dipteran fly whose larvae feed inside tender leaf tissues, inducing distinct conical or blister-like galls that impair photosynthesis and cause premature leaf drop.",
+    symptoms: [
+      "Numerous tiny blister-like, wart-like galls on both upper and lower leaf surfaces",
+      "Galls initially yellowish-green, turning reddish-brown, and finally dark necrotic black",
+      "Severe galling leads to leaf curling, crinkling, deformation, and stunted shoot growth",
+      "Tiny exit holes on the underside of galls where adult midges have emerged"
+    ],
+    causes: [
+      "Adult midges laying eggs in newly emerged vegetative flushes",
+      "Warm temperatures and high ambient humidity favoring rapid larval development",
+      "Continuous overlapping flush cycles offering non-stop food sources"
+    ],
+    management: [
+      "Spray systemic insecticides such as imidacloprid (0.3 ml/L) or thiamethoxam at flush initiation",
+      "Prune and burn heavily infested shoots during regular orchard sanitation",
+      "Introduce or conserve parasitoid wasps (e.g., Platygaster spp.) that naturally parasitize larvae"
+    ],
+    prevention: [
+      "Light cultivation of tree basins to destroy overwintering/summering pupae in topsoil",
+      "Monitor tender leaf emergence using yellow sticky traps",
+      "Avoid excessive nitrogen fertilization that prolongs soft vegetative flushes"
+    ],
+    accentColor: "yellow"
+  },
+  "Healthy": {
+    id: "healthy",
+    name: "Healthy",
+    scientificName: "Mangifera indica L.",
+    category: "Normal",
+    severity: "None",
+    description: "The leaf sample demonstrates robust physiological health with vibrant chlorophyll pigmentation, intact leaf margins, clear venation, and no visible symptoms of fungal, bacterial, or insect damage.",
+    symptoms: [
+      "Deep lustrous green foliage with uniform chlorophyll distribution",
+      "Intact, smooth leaf margins without tearing, bites, or cuts",
+      "Absence of necrotic lesions, blisters, powdery coatings, or fungal mats",
+      "Well-developed midrib and secondary lateral veins"
+    ],
+    causes: [
+      "Optimal soil nutrition, proper irrigation balance, and adequate sunlight",
+      "Effective orchard sanitation and integrated pest management practices",
+      "Good canopy airflow reducing pathogen sporulation conditions"
+    ],
+    management: [
+      "Maintain current fertilization and balanced watering schedule",
+      "Continue periodic prophylactic inspections throughout seasonal flushing and flowering",
+      "No chemical pesticide intervention required"
+    ],
+    prevention: [
+      "Apply organic compost and mulch around tree drip lines to maintain soil microbiome",
+      "Ensure timely winter pruning for adequate sunlight penetration",
+      "Routine scouting to catch early disease vectors before colonization"
+    ],
+    accentColor: "emerald"
+  },
+  "Powdery Mildew": {
+    id: "powdery-mildew",
+    name: "Powdery Mildew",
+    scientificName: "Oidium mangiferae",
+    category: "Fungal",
+    severity: "High",
+    description: "Powdery Mildew is an economically destructive fungal disease primarily targeting inflorescences and new foliage. It is easily recognized by a powdery white superficial fungal coating.",
+    symptoms: [
+      "White or grayish powdery superficial mycelial patches on young leaves and blossoms",
+      "Infected leaves curl, twist, become brittle, and exhibit purple-brown discoloration beneath the powder",
+      "Premature dropping of infected young leaves and unopened blossom buds",
+      "Severe reduction in fruit set and complete loss of flower panicles"
+    ],
+    causes: [
+      "Cool nights (10°C - 15°C) followed by warm dry days (25°C - 30°C)",
+      "High relative humidity during mornings without requiring actual liquid rainfall",
+      "Cloudy and misty weather during mango flowering season"
+    ],
+    management: [
+      "Apply wettable sulfur (0.2%) as an effective protective spray",
+      "Spray systemic fungicides like hexaconazole, penconazole, or dinocap at panicle emergence",
+      "Repeat application at 10-14 day intervals until fruit set is completed"
+    ],
+    prevention: [
+      "Prune dense inner canopy branches to increase sunlight and heat penetration",
+      "Avoid planting overly dense orchards in valleys prone to morning fog and dampness",
+      "Conserve beneficial hyperparasitic fungi like Ampelomyces quisqualis"
+    ],
+    accentColor: "indigo"
+  },
+  "Sooty Mould": {
+    id: "sooty-mould",
+    name: "Sooty Mould",
+    scientificName: "Meliola mangiferae / Capnodium spp.",
+    category: "Fungal",
+    severity: "Moderate",
+    description: "Sooty Mould is a black, superficial fungal crust that grows on honeydew excreted by sap-sucking insects like mango hoppers, scales, mealybugs, and aphids. Although non-parasitic, it severely inhibits photosynthesis.",
+    symptoms: [
+      "Thick, velvety or crusty black soot-like coating covering upper leaf surfaces",
+      "Black fungal film easily peels or scrapes off the leaf epidermis",
+      "Yellowing and stunted growth of underlying leaf tissue due to blocked sunlight",
+      "Presence of honeydew-secreting insects (hoppers, mealybugs) on twigs and stems"
+    ],
+    causes: [
+      "Heavy infestation of sucking insect pests excreting sweet honeydew droplets",
+      "Shady, humid, and poorly aerated tree canopies favoring fungal proliferation",
+      "Absence of insect pest management allowing honeydew accumulation"
+    ],
+    management: [
+      "Control the primary insect culprits with systemic insecticides (imidacloprid or dimethoate)",
+      "Spray dilute starch solution (2% to 3%) or Maida paste; as it dries, it flakes off the black crust",
+      "Spray copper oxychloride (0.3%) or dilute soap solution to wash away sooty residues"
+    ],
+    prevention: [
+      "Regular orchard scouting for early presence of mango hoppers and mealybugs",
+      "Thin out inner canopy shoots to allow wind and sunlight to deter sucking insects",
+      "Band tree trunks with polythene sheets and grease to block ant transport of scales"
+    ],
+    accentColor: "slate"
+  }
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRpc2Vhc2VEYXRhLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBpbnRlcmZhY2UgRGlzZWFzZUluZm8ge1xuICBpZDogc3RyaW5nO1xuICBuYW1lOiBzdHJpbmc7XG4gIHNjaWVudGlmaWNOYW1lOiBzdHJpbmc7XG4gIGNhdGVnb3J5OiAnRnVuZ2FsJyB8ICdCYWN0ZXJpYWwnIHwgJ1Blc3QnIHwgJ05vcm1hbCc7XG4gIHNldmVyaXR5OiAnTm9uZScgfCAnTW9kZXJhdGUnIHwgJ0hpZ2gnIHwgJ1NldmVyZSc7XG4gIGRlc2NyaXB0aW9uOiBzdHJpbmc7XG4gIHN5bXB0b21zOiBzdHJpbmdbXTtcbiAgY2F1c2VzOiBzdHJpbmdbXTtcbiAgbWFuYWdlbWVudDogc3RyaW5nW107XG4gIHByZXZlbnRpb246IHN0cmluZ1tdO1xuICBhY2NlbnRDb2xvcjogc3RyaW5nO1xufVxuXG5leHBvcnQgY29uc3QgTUFOR09fRElTRUFTRVM6IFJlY29yZDxzdHJpbmcsIERpc2Vhc2VJbmZvPiA9IHtcbiAgXCJBbnRocmFjbm9zZVwiOiB7XG4gICAgaWQ6IFwiYW50aHJhY25vc2VcIixcbiAgICBuYW1lOiBcIkFudGhyYWNub3NlXCIsXG4gICAgc2NpZW50aWZpY05hbWU6IFwiQ29sbGV0b3RyaWNodW0gZ2xvZW9zcG9yaW9pZGVzXCIsXG4gICAgY2F0ZWdvcnk6IFwiRnVuZ2FsXCIsXG4gICAgc2V2ZXJpdHk6IFwiSGlnaFwiLFxuICAgIGRlc2NyaXB0aW9uOiBcIkFudGhyYWNub3NlIGlzIG9uZSBvZiB0aGUgbW9zdCB3aWRlc3ByZWFkIGFuZCBkYW1hZ2luZyBmdW5nYWwgZGlzZWFzZXMgYWZmZWN0aW5nIG1hbmdvIG9yY2hhcmRzIHdvcmxkd2lkZS4gSXQgYXR0YWNrcyB5b3VuZyBsZWF2ZXMsIGZsb3dlcnMsIHR3aWdzLCBhbmQgbWF0dXJpbmcgZnJ1aXRzLCBsZWFkaW5nIHRvIHByZW1hdHVyZSBsZWFmIGRyb3AgYW5kIGZydWl0IHJvdC5cIixcbiAgICBzeW1wdG9tczogW1xuICAgICAgXCJTbWFsbCwgYW5ndWxhciwgZGFyayBicm93biB0byBibGFjayBzcG90cyB3aXRoIHllbGxvdyBoYWxvcyBvbiB5b3VuZyBmb2xpYWdlXCIsXG4gICAgICBcIkxlc2lvbnMgZW5sYXJnZSBhbmQgY29hbGVzY2UsIGZvcm1pbmcgbGFyZ2UgbmVjcm90aWMgcGF0Y2hlc1wiLFxuICAgICAgXCJMZWF2ZXMgYmVjb21lIGRpc3RvcnRlZCwgdGVhciBhbG9uZyBkcnkgbGVzaW9ucywgYW5kIGRyb3AgcHJlbWF0dXJlbHlcIixcbiAgICAgIFwiQmxhY2sgYmxpZ2h0IG9uIGJsb3Nzb20gcGFuaWNsZXMgY2F1c2luZyBmbG93ZXIgZHJvcFwiXG4gICAgXSxcbiAgICBjYXVzZXM6IFtcbiAgICAgIFwiUHJvbG9uZ2VkIGxlYWYgd2V0bmVzcyBhbmQgd2FybSB0ZW1wZXJhdHVyZXMgKDI0wrBDIC0gMzDCsEMpXCIsXG4gICAgICBcIkhpZ2ggcmVsYXRpdmUgaHVtaWRpdHkgYWJvdmUgOTAlIGR1cmluZyBmbG93ZXJpbmcgYW5kIGZsdXNoaW5nXCIsXG4gICAgICBcIldpbmQtZHJpdmVuIHJhaW4gc3BsYXNoaW5nIGZ1bmdhbCBjb25pZGlhIGZyb20gaW5mZWN0ZWQgdHdpZ3NcIlxuICAgIF0sXG4gICAgbWFuYWdlbWVudDogW1xuICAgICAgXCJQcnVuZSBhZmZlY3RlZCBicmFuY2hlcyBhbmQgZGVzdHJveSBmYWxsZW4gaW5mZWN0ZWQgbGVhdmVzIHRvIHJlZHVjZSBpbm9jdWx1bVwiLFxuICAgICAgXCJBcHBseSBjb3BwZXIgb3h5Y2hsb3JpZGUgKDAuMyUpIG9yIG1hbmNvemViIGJlZm9yZSBibG9zc29tIG9wZW5pbmdcIixcbiAgICAgIFwiU3ByYXkgc3lzdGVtaWMgZnVuZ2ljaWRlcyBsaWtlIGNhcmJlbmRhemltIG9yIGF6b3h5c3Ryb2JpbiBkdXJpbmcgaGVhdnkgZmx1c2ggcGVyaW9kc1wiXG4gICAgXSxcbiAgICBwcmV2ZW50aW9uOiBbXG4gICAgICBcIk1haW50YWluIGFkZXF1YXRlIHRyZWUgc3BhY2luZyBhbmQgY2Fub3B5IGFlcmF0aW9uIHZpYSB3aW50ZXIgcHJ1bmluZ1wiLFxuICAgICAgXCJBdm9pZCBvdmVyaGVhZCBzcHJpbmtsZXIgaXJyaWdhdGlvbiB0aGF0IHdldHMgbGVhdmVzIGFuZCBmbG93ZXJzXCIsXG4gICAgICBcIlBsYW50IHJlc2lzdGFudCBvciB0b2xlcmFudCBtYW5nbyBjdWx0aXZhcnMgd2hlbiBlc3RhYmxpc2hpbmcgbmV3IGdyb3Zlc1wiXG4gICAgXSxcbiAgICBhY2NlbnRDb2xvcjogXCJyb3NlXCJcbiAgfSxcbiAgXCJCYWN0ZXJpYWwgQ2Fua2VyXCI6IHtcbiAgICBpZDogXCJiYWN0ZXJpYWwtY2Fua2VyXCIsXG4gICAgbmFtZTogXCJCYWN0ZXJpYWwgQ2Fua2VyXCIsXG4gICAgc2NpZW50aWZpY05hbWU6IFwiWGFudGhvbW9uYXMgY2FtcGVzdHJpcyBwdi4gbWFuZ2lmZXJhZWluZGljYWVcIixcbiAgICBjYXRlZ29yeTogXCJCYWN0ZXJpYWxcIixcbiAgICBzZXZlcml0eTogXCJTZXZlcmVcIixcbiAgICBkZXNjcmlwdGlvbjogXCJCYWN0ZXJpYWwgQ2Fua2VyIGlzIGEgc2V2ZXJlIGJhY3RlcmlhbCBpbmZlY3Rpb24gY2F1c2luZyBjYW5rZXJzLCBsZWFmIGJsaWdodCwgYW5kIGd1bW15IGV4dWRhdGlvbnMgb24gbWFuZ28gbGVhdmVzLCBicmFuY2hlcywgYW5kIGZydWl0cywgb2Z0ZW4gY2F1c2luZyBoZWF2eSBjcm9wIGxvc3MuXCIsXG4gICAgc3ltcHRvbXM6IFtcbiAgICAgIFwiV2F0ZXItc29ha2VkLCBhbmd1bGFyLCByYWlzZWQgZGFyayBicm93biBsZXNpb25zIGJvdW5kZWQgYnkgbGVhZiB2ZWluc1wiLFxuICAgICAgXCJZZWxsb3cgaGFsb3MgdHlwaWNhbGx5IHN1cnJvdW5kaW5nIGFuZ3VsYXIgbmVjcm90aWMgc3BvdHNcIixcbiAgICAgIFwiQ3JhY2tpbmcgb2YgbGVhZiBtaWRyaWJzIHdpdGggYmFjdGVyaWFsIG9vemUgdW5kZXIgaHVtaWQgY29uZGl0aW9uc1wiLFxuICAgICAgXCJTdGFyaW5nIGNhbmtlcnMgb24gdHdpZ3MgbGVhZGluZyB0byBicmFuY2ggZGllYmFja1wiXG4gICAgXSxcbiAgICBjYXVzZXM6IFtcbiAgICAgIFwiQmFjdGVyaWFsIGluZ3Jlc3MgdGhyb3VnaCBuYXR1cmFsIG9wZW5pbmdzIChzdG9tYXRhLCBsZW50aWNlbHMpIGFuZCBtZWNoYW5pY2FsIHdvdW5kc1wiLFxuICAgICAgXCJTdHJvbmcgd2luZHN0b3JtcyBhbmQgaGFpbCBkcml2aW5nIHJhaW4gaW50byB0cmVlIGNhbm9waWVzXCIsXG4gICAgICBcIkhpZ2ggdGVtcGVyYXR1cmVzIGNvdXBsZWQgd2l0aCBmcmVxdWVudCByYWluZmFsbFwiXG4gICAgXSxcbiAgICBtYW5hZ2VtZW50OiBbXG4gICAgICBcIlNwcmF5IGNvcHBlciBoeWRyb3hpZGUgb3IgY29wcGVyIG94eWNobG9yaWRlIGNvbWJpbmVkIHdpdGggc3RyZXB0b2N5Y2xpbmUgKDEwMCBwcG0pXCIsXG4gICAgICBcIlJlbW92ZSBzZXZlcmVseSBjYW5rZXJlZCB0d2lncyBhbmQgc2VhbCBjdXRzIHdpdGggQm9yZGVhdXggcGFzdGVcIixcbiAgICAgIFwiRGlzaW5mZWN0IHBydW5pbmcgdG9vbHMgd2l0aCA3MCUgYWxjb2hvbCBvciAxMCUgYmxlYWNoIGJldHdlZW4gY3V0c1wiXG4gICAgXSxcbiAgICBwcmV2ZW50aW9uOiBbXG4gICAgICBcIkVzdGFibGlzaCB3aW5kYnJlYWtzIGFyb3VuZCBvcmNoYXJkcyB0byBtaW5pbWl6ZSBtZWNoYW5pY2FsIGFicmFzaW9uc1wiLFxuICAgICAgXCJJbnNwZWN0IG51cnNlcnkgc2FwbGluZ3MgdGhvcm91Z2hseSBiZWZvcmUgb3JjaGFyZCB0cmFuc3BsYW50aW5nXCIsXG4gICAgICBcIkF2b2lkIGhhbmRsaW5nIHRyZWVzIHdoZW4gbGVhdmVzIGFuZCBmb2xpYWdlIGFyZSB3ZXRcIlxuICAgIF0sXG4gICAgYWNjZW50Q29sb3I6IFwiYW1iZXJcIlxuICB9LFxuICBcIkN1dHRpbmcgV2VldmlsXCI6IHtcbiAgICBpZDogXCJjdXR0aW5nLXdlZXZpbFwiLFxuICAgIG5hbWU6IFwiQ3V0dGluZyBXZWV2aWxcIixcbiAgICBzY2llbnRpZmljTmFtZTogXCJEZXBvcmF1cyBtYXJnaW5hdHVzXCIsXG4gICAgY2F0ZWdvcnk6IFwiUGVzdFwiLFxuICAgIHNldmVyaXR5OiBcIk1vZGVyYXRlXCIsXG4gICAgZGVzY3JpcHRpb246IFwiVGhlIE1hbmdvIExlYWYtQ3V0dGluZyBXZWV2aWwgaXMgYSBkZXN0cnVjdGl2ZSBjdXJjdWxpb25pZCBiZWV0bGUuIEFkdWx0IGZlbWFsZXMgbGF5IGVnZ3MgaW4gZnJlc2ggeW91bmcgbGVhdmVzIGFuZCBjbGVhbmx5IHNldmVyIHRoZSBsZWFmIGJsYWRlIG5lYXIgdGhlIHBldGlvbGUsIGNhdXNpbmcgc2V2ZXJlIGRlZm9saWF0aW9uIGR1cmluZyBmbHVzaGluZy5cIixcbiAgICBzeW1wdG9tczogW1xuICAgICAgXCJDbGVhbiwgc2Npc3Nvci1saWtlIHRyYW5zdmVyc2FsIGN1dHMgYWNyb3NzIHRoZSBiYXNlIG9yIG1pZGRsZSBvZiB0ZW5kZXIgbGVhdmVzXCIsXG4gICAgICBcIlNldmVyZWQgbGVhdmVzIGNhcnBldGluZyB0aGUgZ3JvdW5kIGJlbmVhdGggdGhlIHRyZWUgY2Fub3B5XCIsXG4gICAgICBcIlN0dW50ZWQgZmx1c2ggZ3Jvd3RoIGFuZCBiYXJlIHNob290IHRpcHNcIixcbiAgICAgIFwiVGlueSBwdW5jdHVyZSBtYXJrcyBhbG9uZyB0aGUgbWlkcmliIHdoZXJlIGVnZ3MgYXJlIGRlcG9zaXRlZFwiXG4gICAgXSxcbiAgICBjYXVzZXM6IFtcbiAgICAgIFwiQWR1bHQgd2VldmlscyBlbWVyZ2luZyBmcm9tIHB1cGF0aW9uIGluIHRoZSBzb2lsIGR1cmluZyBuZXcgbGVhZiBmbHVzaCBjeWNsZXNcIixcbiAgICAgIFwiRGVuc2UsIHVucHJ1bmVkIHRyZWUgY2Fub3BpZXMgcHJvdmlkaW5nIHNoZWx0ZXIgZm9yIGFkdWx0IGJlZXRsZXNcIixcbiAgICAgIFwiV2FybSBhbmQgaHVtaWQgd2VhdGhlciBjb2luY2lkaW5nIHdpdGggdGhlIGluaXRpYXRpb24gb2YgbmV3IHZlZ2V0YXRpdmUgZmx1c2hlc1wiXG4gICAgXSxcbiAgICBtYW5hZ2VtZW50OiBbXG4gICAgICBcIkNvbGxlY3QgYW5kIGRlc3Ryb3kgZmFsbGVuIGN1dCBsZWF2ZXMgY29udGFpbmluZyBlZ2dzIGFuZCBsYXJ2YWUgcHJvbXB0bHlcIixcbiAgICAgIFwiU3ByYXkgcmVjb21tZW5kZWQgaW5zZWN0IGdyb3d0aCByZWd1bGF0b3JzIG9yIG5lZW0gc2VlZCBrZXJuZWwgZXh0cmFjdCAoTlNLRSA1JSlcIixcbiAgICAgIFwiQXBwbHkgY2hsb3JweXJpZm9zIG9yIGN5cGVybWV0aHJpbiBhcm91bmQgY2Fub3B5IHBlcmltZXRlciBkdXJpbmcgcGVhayBhZHVsdCBlbWVyZ2VuY2VcIlxuICAgIF0sXG4gICAgcHJldmVudGlvbjogW1xuICAgICAgXCJSYWtlIGFuZCBwbG93IHRyZWUgYmFzaW5zIHRvIGV4cG9zZSBwdXBhZSB0byBzb2xhciBoZWF0IGFuZCBuYXR1cmFsIHByZWRhdG9yc1wiLFxuICAgICAgXCJTeW5jaHJvbml6ZSBmbHVzaCBtYW5hZ2VtZW50IHRvIG1pbmltaXplIHByb2xvbmdlZCB2dWxuZXJhYmxlIHBlcmlvZHNcIixcbiAgICAgIFwiRW5jb3VyYWdlIHByZWRhdG9yeSBhbnRzIGFuZCBiaXJkcyBpbiB0aGUgb3JjaGFyZCBlY29zeXN0ZW1cIlxuICAgIF0sXG4gICAgYWNjZW50Q29sb3I6IFwib3JhbmdlXCJcbiAgfSxcbiAgXCJEaWUgQmFja1wiOiB7XG4gICAgaWQ6IFwiZGllLWJhY2tcIixcbiAgICBuYW1lOiBcIkRpZSBCYWNrXCIsXG4gICAgc2NpZW50aWZpY05hbWU6IFwiTGFzaW9kaXBsb2RpYSB0aGVvYnJvbWFlXCIsXG4gICAgY2F0ZWdvcnk6IFwiRnVuZ2FsXCIsXG4gICAgc2V2ZXJpdHk6IFwiU2V2ZXJlXCIsXG4gICAgZGVzY3JpcHRpb246IFwiRGllIEJhY2sgaXMgYSB2YXNjdWxhciBmdW5nYWwgZGlzZWFzZSBjaGFyYWN0ZXJpemVkIGJ5IHRoZSBncmFkdWFsIGRyeWluZyBhbmQgZGVhdGggb2Ygc2hvb3RzIGFuZCBicmFuY2hlcyBmcm9tIHRvcCB0byBib3R0b20sIG9mdGVuIGxlYWRpbmcgdG8gcGFydGlhbCBvciBjb21wbGV0ZSB0cmVlIG1vcnRhbGl0eSBpZiB1bm1hbmFnZWQuXCIsXG4gICAgc3ltcHRvbXM6IFtcbiAgICAgIFwiTGVhdmVzIHR1cm4gYnJvd24sIHdpdGhlciwgYW5kIGRyeSB1cCB3aGlsZSByZW1haW5pbmcgYXR0YWNoZWQgdG8gZGVhZCB0d2lnc1wiLFxuICAgICAgXCJEcnlpbmcgYW5kIGRpc2NvbG9yYXRpb24gcHJvZ3Jlc3NlcyBkb3dud2FyZCBmcm9tIHRoZSBzaG9vdCB0aXAgdG8gdGhlIHRydW5rXCIsXG4gICAgICBcIkJyb3duaXNoLWJsYWNrIGludGVybmFsIHZhc2N1bGFyIGRpc2NvbG9yYXRpb24gdmlzaWJsZSB3aGVuIHR3aWdzIGFyZSBzcGxpdCBsb25naXR1ZGluYWxseVwiLFxuICAgICAgXCJHdW1tb3NpcyBhbmQgcmVzaW4gb296aW5nIGZyb20gYmFyayBmaXNzdXJlcyBvbiBpbmZlY3RlZCBicmFuY2hlc1wiXG4gICAgXSxcbiAgICBjYXVzZXM6IFtcbiAgICAgIFwiV2Vha2VuZWQgdHJlZXMgc3RyZXNzZWQgYnkgZHJvdWdodCwgcG9vciBkcmFpbmFnZSwgb3IgbnV0cml0aW9uYWwgZGVmaWNpZW5jeVwiLFxuICAgICAgXCJGdW5nYWwgaW52YXNpb24gdGhyb3VnaCBwcnVuaW5nIHdvdW5kcywgaW5zZWN0IGJvcmVycywgb3Igc3VuIHNjYWxkIGluanVyaWVzXCIsXG4gICAgICBcIkhpZ2ggdGVtcGVyYXR1cmVzICgzMMKwQyAtIDM1wrBDKSBhbmQgd2F0ZXIgc3RhZ25hdGlvbiBhcm91bmQgcm9vdHNcIlxuICAgIF0sXG4gICAgbWFuYWdlbWVudDogW1xuICAgICAgXCJQcnVuZSBhZmZlY3RlZCBicmFuY2hlcyA14oCTOCBjbSBiZWxvdyB0aGUgYm91bmRhcnkgb2YgZGlzZWFzZWQgd29vZCBpbnRvIGhlYWx0aHkgZ3JlZW4gdGlzc3VlXCIsXG4gICAgICBcIkltbWVkaWF0ZWx5IHBhc3RlIGN1dCBzdXJmYWNlcyB3aXRoIEJvcmRlYXV4IHBhc3RlIG9yIGNvcHBlciBveHljaGxvcmlkZSBwYWludFwiLFxuICAgICAgXCJEcmVuY2ggcm9vdCB6b25lcyBhbmQgc3ByYXkgY2Fub3B5IHdpdGggY2FyYmVuZGF6aW0gb3IgdGhpb3BoYW5hdGUtbWV0aHlsXCJcbiAgICBdLFxuICAgIHByZXZlbnRpb246IFtcbiAgICAgIFwiTWFpbnRhaW4gYmFsYW5jZWQgZmVydGlsaXphdGlvbiwgZXNwZWNpYWxseSBwb3Rhc3NpdW0gYW5kIG1pY3JvbnV0cmllbnRzICh6aW5jLCBib3JvbilcIixcbiAgICAgIFwiRW5zdXJlIHByb3BlciBvcmNoYXJkIGRyYWluYWdlIHRvIHByZXZlbnQgd2F0ZXJsb2dnaW5nIGR1cmluZyByYWlueSBwZXJpb2RzXCIsXG4gICAgICBcIkNvbnRyb2wgYmFyayBib3JlcnMgYW5kIHN0ZW0gYm9yZXJzIHdoaWNoIGNyZWF0ZSBlbnRyeSB3b3VuZHMgZm9yIHRoZSBmdW5ndXNcIlxuICAgIF0sXG4gICAgYWNjZW50Q29sb3I6IFwicmVkXCJcbiAgfSxcbiAgXCJHYWxsIE1pZGdlXCI6IHtcbiAgICBpZDogXCJnYWxsLW1pZGdlXCIsXG4gICAgbmFtZTogXCJHYWxsIE1pZGdlXCIsXG4gICAgc2NpZW50aWZpY05hbWU6IFwiUHJvY29udGFyaW5pYSBtYXR0ZWlhbmFcIixcbiAgICBjYXRlZ29yeTogXCJQZXN0XCIsXG4gICAgc2V2ZXJpdHk6IFwiTW9kZXJhdGVcIixcbiAgICBkZXNjcmlwdGlvbjogXCJUaGUgTWFuZ28gR2FsbCBNaWRnZSBpcyBhIHRpbnkgZGlwdGVyYW4gZmx5IHdob3NlIGxhcnZhZSBmZWVkIGluc2lkZSB0ZW5kZXIgbGVhZiB0aXNzdWVzLCBpbmR1Y2luZyBkaXN0aW5jdCBjb25pY2FsIG9yIGJsaXN0ZXItbGlrZSBnYWxscyB0aGF0IGltcGFpciBwaG90b3N5bnRoZXNpcyBhbmQgY2F1c2UgcHJlbWF0dXJlIGxlYWYgZHJvcC5cIixcbiAgICBzeW1wdG9tczogW1xuICAgICAgXCJOdW1lcm91cyB0aW55IGJsaXN0ZXItbGlrZSwgd2FydC1saWtlIGdhbGxzIG9uIGJvdGggdXBwZXIgYW5kIGxvd2VyIGxlYWYgc3VyZmFjZXNcIixcbiAgICAgIFwiR2FsbHMgaW5pdGlhbGx5IHllbGxvd2lzaC1ncmVlbiwgdHVybmluZyByZWRkaXNoLWJyb3duLCBhbmQgZmluYWxseSBkYXJrIG5lY3JvdGljIGJsYWNrXCIsXG4gICAgICBcIlNldmVyZSBnYWxsaW5nIGxlYWRzIHRvIGxlYWYgY3VybGluZywgY3JpbmtsaW5nLCBkZWZvcm1hdGlvbiwgYW5kIHN0dW50ZWQgc2hvb3QgZ3Jvd3RoXCIsXG4gICAgICBcIlRpbnkgZXhpdCBob2xlcyBvbiB0aGUgdW5kZXJzaWRlIG9mIGdhbGxzIHdoZXJlIGFkdWx0IG1pZGdlcyBoYXZlIGVtZXJnZWRcIlxuICAgIF0sXG4gICAgY2F1c2VzOiBbXG4gICAgICBcIkFkdWx0IG1pZGdlcyBsYXlpbmcgZWdncyBpbiBuZXdseSBlbWVyZ2VkIHZlZ2V0YXRpdmUgZmx1c2hlc1wiLFxuICAgICAgXCJXYXJtIHRlbXBlcmF0dXJlcyBhbmQgaGlnaCBhbWJpZW50IGh1bWlkaXR5IGZhdm9yaW5nIHJhcGlkIGxhcnZhbCBkZXZlbG9wbWVudFwiLFxuICAgICAgXCJDb250aW51b3VzIG92ZXJsYXBwaW5nIGZsdXNoIGN5Y2xlcyBvZmZlcmluZyBub24tc3RvcCBmb29kIHNvdXJjZXNcIlxuICAgIF0sXG4gICAgbWFuYWdlbWVudDogW1xuICAgICAgXCJTcHJheSBzeXN0ZW1pYyBpbnNlY3RpY2lkZXMgc3VjaCBhcyBpbWlkYWNsb3ByaWQgKDAuMyBtbC9MKSBvciB0aGlhbWV0aG94YW0gYXQgZmx1c2ggaW5pdGlhdGlvblwiLFxuICAgICAgXCJQcnVuZSBhbmQgYnVybiBoZWF2aWx5IGluZmVzdGVkIHNob290cyBkdXJpbmcgcmVndWxhciBvcmNoYXJkIHNhbml0YXRpb25cIixcbiAgICAgIFwiSW50cm9kdWNlIG9yIGNvbnNlcnZlIHBhcmFzaXRvaWQgd2FzcHMgKGUuZy4sIFBsYXR5Z2FzdGVyIHNwcC4pIHRoYXQgbmF0dXJhbGx5IHBhcmFzaXRpemUgbGFydmFlXCJcbiAgICBdLFxuICAgIHByZXZlbnRpb246IFtcbiAgICAgIFwiTGlnaHQgY3VsdGl2YXRpb24gb2YgdHJlZSBiYXNpbnMgdG8gZGVzdHJveSBvdmVyd2ludGVyaW5nL3N1bW1lcmluZyBwdXBhZSBpbiB0b3Bzb2lsXCIsXG4gICAgICBcIk1vbml0b3IgdGVuZGVyIGxlYWYgZW1lcmdlbmNlIHVzaW5nIHllbGxvdyBzdGlja3kgdHJhcHNcIixcbiAgICAgIFwiQXZvaWQgZXhjZXNzaXZlIG5pdHJvZ2VuIGZlcnRpbGl6YXRpb24gdGhhdCBwcm9sb25ncyBzb2Z0IHZlZ2V0YXRpdmUgZmx1c2hlc1wiXG4gICAgXSxcbiAgICBhY2NlbnRDb2xvcjogXCJ5ZWxsb3dcIlxuICB9LFxuICBcIkhlYWx0aHlcIjoge1xuICAgIGlkOiBcImhlYWx0aHlcIixcbiAgICBuYW1lOiBcIkhlYWx0aHlcIixcbiAgICBzY2llbnRpZmljTmFtZTogXCJNYW5naWZlcmEgaW5kaWNhIEwuXCIsXG4gICAgY2F0ZWdvcnk6IFwiTm9ybWFsXCIsXG4gICAgc2V2ZXJpdHk6IFwiTm9uZVwiLFxuICAgIGRlc2NyaXB0aW9uOiBcIlRoZSBsZWFmIHNhbXBsZSBkZW1vbnN0cmF0ZXMgcm9idXN0IHBoeXNpb2xvZ2ljYWwgaGVhbHRoIHdpdGggdmlicmFudCBjaGxvcm9waHlsbCBwaWdtZW50YXRpb24sIGludGFjdCBsZWFmIG1hcmdpbnMsIGNsZWFyIHZlbmF0aW9uLCBhbmQgbm8gdmlzaWJsZSBzeW1wdG9tcyBvZiBmdW5nYWwsIGJhY3RlcmlhbCwgb3IgaW5zZWN0IGRhbWFnZS5cIixcbiAgICBzeW1wdG9tczogW1xuICAgICAgXCJEZWVwIGx1c3Ryb3VzIGdyZWVuIGZvbGlhZ2Ugd2l0aCB1bmlmb3JtIGNobG9yb3BoeWxsIGRpc3RyaWJ1dGlvblwiLFxuICAgICAgXCJJbnRhY3QsIHNtb290aCBsZWFmIG1hcmdpbnMgd2l0aG91dCB0ZWFyaW5nLCBiaXRlcywgb3IgY3V0c1wiLFxuICAgICAgXCJBYnNlbmNlIG9mIG5lY3JvdGljIGxlc2lvbnMsIGJsaXN0ZXJzLCBwb3dkZXJ5IGNvYXRpbmdzLCBvciBmdW5nYWwgbWF0c1wiLFxuICAgICAgXCJXZWxsLWRldmVsb3BlZCBtaWRyaWIgYW5kIHNlY29uZGFyeSBsYXRlcmFsIHZlaW5zXCJcbiAgICBdLFxuICAgIGNhdXNlczogW1xuICAgICAgXCJPcHRpbWFsIHNvaWwgbnV0cml0aW9uLCBwcm9wZXIgaXJyaWdhdGlvbiBiYWxhbmNlLCBhbmQgYWRlcXVhdGUgc3VubGlnaHRcIixcbiAgICAgIFwiRWZmZWN0aXZlIG9yY2hhcmQgc2FuaXRhdGlvbiBhbmQgaW50ZWdyYXRlZCBwZXN0IG1hbmFnZW1lbnQgcHJhY3RpY2VzXCIsXG4gICAgICBcIkdvb2QgY2Fub3B5IGFpcmZsb3cgcmVkdWNpbmcgcGF0aG9nZW4gc3BvcnVsYXRpb24gY29uZGl0aW9uc1wiXG4gICAgXSxcbiAgICBtYW5hZ2VtZW50OiBbXG4gICAgICBcIk1haW50YWluIGN1cnJlbnQgZmVydGlsaXphdGlvbiBhbmQgYmFsYW5jZWQgd2F0ZXJpbmcgc2NoZWR1bGVcIixcbiAgICAgIFwiQ29udGludWUgcGVyaW9kaWMgcHJvcGh5bGFjdGljIGluc3BlY3Rpb25zIHRocm91Z2hvdXQgc2Vhc29uYWwgZmx1c2hpbmcgYW5kIGZsb3dlcmluZ1wiLFxuICAgICAgXCJObyBjaGVtaWNhbCBwZXN0aWNpZGUgaW50ZXJ2ZW50aW9uIHJlcXVpcmVkXCJcbiAgICBdLFxuICAgIHByZXZlbnRpb246IFtcbiAgICAgIFwiQXBwbHkgb3JnYW5pYyBjb21wb3N0IGFuZCBtdWxjaCBhcm91bmQgdHJlZSBkcmlwIGxpbmVzIHRvIG1haW50YWluIHNvaWwgbWljcm9iaW9tZVwiLFxuICAgICAgXCJFbnN1cmUgdGltZWx5IHdpbnRlciBwcnVuaW5nIGZvciBhZGVxdWF0ZSBzdW5saWdodCBwZW5ldHJhdGlvblwiLFxuICAgICAgXCJSb3V0aW5lIHNjb3V0aW5nIHRvIGNhdGNoIGVhcmx5IGRpc2Vhc2UgdmVjdG9ycyBiZWZvcmUgY29sb25pemF0aW9uXCJcbiAgICBdLFxuICAgIGFjY2VudENvbG9yOiBcImVtZXJhbGRcIlxuICB9LFxuICBcIlBvd2RlcnkgTWlsZGV3XCI6IHtcbiAgICBpZDogXCJwb3dkZXJ5LW1pbGRld1wiLFxuICAgIG5hbWU6IFwiUG93ZGVyeSBNaWxkZXdcIixcbiAgICBzY2llbnRpZmljTmFtZTogXCJPaWRpdW0gbWFuZ2lmZXJhZVwiLFxuICAgIGNhdGVnb3J5OiBcIkZ1bmdhbFwiLFxuICAgIHNldmVyaXR5OiBcIkhpZ2hcIixcbiAgICBkZXNjcmlwdGlvbjogXCJQb3dkZXJ5IE1pbGRldyBpcyBhbiBlY29ub21pY2FsbHkgZGVzdHJ1Y3RpdmUgZnVuZ2FsIGRpc2Vhc2UgcHJpbWFyaWx5IHRhcmdldGluZyBpbmZsb3Jlc2NlbmNlcyBhbmQgbmV3IGZvbGlhZ2UuIEl0IGlzIGVhc2lseSByZWNvZ25pemVkIGJ5IGEgcG93ZGVyeSB3aGl0ZSBzdXBlcmZpY2lhbCBmdW5nYWwgY29hdGluZy5cIixcbiAgICBzeW1wdG9tczogW1xuICAgICAgXCJXaGl0ZSBvciBncmF5aXNoIHBvd2Rlcnkgc3VwZXJmaWNpYWwgbXljZWxpYWwgcGF0Y2hlcyBvbiB5b3VuZyBsZWF2ZXMgYW5kIGJsb3Nzb21zXCIsXG4gICAgICBcIkluZmVjdGVkIGxlYXZlcyBjdXJsLCB0d2lzdCwgYmVjb21lIGJyaXR0bGUsIGFuZCBleGhpYml0IHB1cnBsZS1icm93biBkaXNjb2xvcmF0aW9uIGJlbmVhdGggdGhlIHBvd2RlclwiLFxuICAgICAgXCJQcmVtYXR1cmUgZHJvcHBpbmcgb2YgaW5mZWN0ZWQgeW91bmcgbGVhdmVzIGFuZCB1bm9wZW5lZCBibG9zc29tIGJ1ZHNcIixcbiAgICAgIFwiU2V2ZXJlIHJlZHVjdGlvbiBpbiBmcnVpdCBzZXQgYW5kIGNvbXBsZXRlIGxvc3Mgb2YgZmxvd2VyIHBhbmljbGVzXCJcbiAgICBdLFxuICAgIGNhdXNlczogW1xuICAgICAgXCJDb29sIG5pZ2h0cyAoMTDCsEMgLSAxNcKwQykgZm9sbG93ZWQgYnkgd2FybSBkcnkgZGF5cyAoMjXCsEMgLSAzMMKwQylcIixcbiAgICAgIFwiSGlnaCByZWxhdGl2ZSBodW1pZGl0eSBkdXJpbmcgbW9ybmluZ3Mgd2l0aG91dCByZXF1aXJpbmcgYWN0dWFsIGxpcXVpZCByYWluZmFsbFwiLFxuICAgICAgXCJDbG91ZHkgYW5kIG1pc3R5IHdlYXRoZXIgZHVyaW5nIG1hbmdvIGZsb3dlcmluZyBzZWFzb25cIlxuICAgIF0sXG4gICAgbWFuYWdlbWVudDogW1xuICAgICAgXCJBcHBseSB3ZXR0YWJsZSBzdWxmdXIgKDAuMiUpIGFzIGFuIGVmZmVjdGl2ZSBwcm90ZWN0aXZlIHNwcmF5XCIsXG4gICAgICBcIlNwcmF5IHN5c3RlbWljIGZ1bmdpY2lkZXMgbGlrZSBoZXhhY29uYXpvbGUsIHBlbmNvbmF6b2xlLCBvciBkaW5vY2FwIGF0IHBhbmljbGUgZW1lcmdlbmNlXCIsXG4gICAgICBcIlJlcGVhdCBhcHBsaWNhdGlvbiBhdCAxMC0xNCBkYXkgaW50ZXJ2YWxzIHVudGlsIGZydWl0IHNldCBpcyBjb21wbGV0ZWRcIlxuICAgIF0sXG4gICAgcHJldmVudGlvbjogW1xuICAgICAgXCJQcnVuZSBkZW5zZSBpbm5lciBjYW5vcHkgYnJhbmNoZXMgdG8gaW5jcmVhc2Ugc3VubGlnaHQgYW5kIGhlYXQgcGVuZXRyYXRpb25cIixcbiAgICAgIFwiQXZvaWQgcGxhbnRpbmcgb3Zlcmx5IGRlbnNlIG9yY2hhcmRzIGluIHZhbGxleXMgcHJvbmUgdG8gbW9ybmluZyBmb2cgYW5kIGRhbXBuZXNzXCIsXG4gICAgICBcIkNvbnNlcnZlIGJlbmVmaWNpYWwgaHlwZXJwYXJhc2l0aWMgZnVuZ2kgbGlrZSBBbXBlbG9teWNlcyBxdWlzcXVhbGlzXCJcbiAgICBdLFxuICAgIGFjY2VudENvbG9yOiBcImluZGlnb1wiXG4gIH0sXG4gIFwiU29vdHkgTW91bGRcIjoge1xuICAgIGlkOiBcInNvb3R5LW1vdWxkXCIsXG4gICAgbmFtZTogXCJTb290eSBNb3VsZFwiLFxuICAgIHNjaWVudGlmaWNOYW1lOiBcIk1lbGlvbGEgbWFuZ2lmZXJhZSAvIENhcG5vZGl1bSBzcHAuXCIsXG4gICAgY2F0ZWdvcnk6IFwiRnVuZ2FsXCIsXG4gICAgc2V2ZXJpdHk6IFwiTW9kZXJhdGVcIixcbiAgICBkZXNjcmlwdGlvbjogXCJTb290eSBNb3VsZCBpcyBhIGJsYWNrLCBzdXBlcmZpY2lhbCBmdW5nYWwgY3J1c3QgdGhhdCBncm93cyBvbiBob25leWRldyBleGNyZXRlZCBieSBzYXAtc3Vja2luZyBpbnNlY3RzIGxpa2UgbWFuZ28gaG9wcGVycywgc2NhbGVzLCBtZWFseWJ1Z3MsIGFuZCBhcGhpZHMuIEFsdGhvdWdoIG5vbi1wYXJhc2l0aWMsIGl0IHNldmVyZWx5IGluaGliaXRzIHBob3Rvc3ludGhlc2lzLlwiLFxuICAgIHN5bXB0b21zOiBbXG4gICAgICBcIlRoaWNrLCB2ZWx2ZXR5IG9yIGNydXN0eSBibGFjayBzb290LWxpa2UgY29hdGluZyBjb3ZlcmluZyB1cHBlciBsZWFmIHN1cmZhY2VzXCIsXG4gICAgICBcIkJsYWNrIGZ1bmdhbCBmaWxtIGVhc2lseSBwZWVscyBvciBzY3JhcGVzIG9mZiB0aGUgbGVhZiBlcGlkZXJtaXNcIixcbiAgICAgIFwiWWVsbG93aW5nIGFuZCBzdHVudGVkIGdyb3d0aCBvZiB1bmRlcmx5aW5nIGxlYWYgdGlzc3VlIGR1ZSB0byBibG9ja2VkIHN1bmxpZ2h0XCIsXG4gICAgICBcIlByZXNlbmNlIG9mIGhvbmV5ZGV3LXNlY3JldGluZyBpbnNlY3RzIChob3BwZXJzLCBtZWFseWJ1Z3MpIG9uIHR3aWdzIGFuZCBzdGVtc1wiXG4gICAgXSxcbiAgICBjYXVzZXM6IFtcbiAgICAgIFwiSGVhdnkgaW5mZXN0YXRpb24gb2Ygc3Vja2luZyBpbnNlY3QgcGVzdHMgZXhjcmV0aW5nIHN3ZWV0IGhvbmV5ZGV3IGRyb3BsZXRzXCIsXG4gICAgICBcIlNoYWR5LCBodW1pZCwgYW5kIHBvb3JseSBhZXJhdGVkIHRyZWUgY2Fub3BpZXMgZmF2b3JpbmcgZnVuZ2FsIHByb2xpZmVyYXRpb25cIixcbiAgICAgIFwiQWJzZW5jZSBvZiBpbnNlY3QgcGVzdCBtYW5hZ2VtZW50IGFsbG93aW5nIGhvbmV5ZGV3IGFjY3VtdWxhdGlvblwiXG4gICAgXSxcbiAgICBtYW5hZ2VtZW50OiBbXG4gICAgICBcIkNvbnRyb2wgdGhlIHByaW1hcnkgaW5zZWN0IGN1bHByaXRzIHdpdGggc3lzdGVtaWMgaW5zZWN0aWNpZGVzIChpbWlkYWNsb3ByaWQgb3IgZGltZXRob2F0ZSlcIixcbiAgICAgIFwiU3ByYXkgZGlsdXRlIHN0YXJjaCBzb2x1dGlvbiAoMiUgdG8gMyUpIG9yIE1haWRhIHBhc3RlOyBhcyBpdCBkcmllcywgaXQgZmxha2VzIG9mZiB0aGUgYmxhY2sgY3J1c3RcIixcbiAgICAgIFwiU3ByYXkgY29wcGVyIG94eWNobG9yaWRlICgwLjMlKSBvciBkaWx1dGUgc29hcCBzb2x1dGlvbiB0byB3YXNoIGF3YXkgc29vdHkgcmVzaWR1ZXNcIlxuICAgIF0sXG4gICAgcHJldmVudGlvbjogW1xuICAgICAgXCJSZWd1bGFyIG9yY2hhcmQgc2NvdXRpbmcgZm9yIGVhcmx5IHByZXNlbmNlIG9mIG1hbmdvIGhvcHBlcnMgYW5kIG1lYWx5YnVnc1wiLFxuICAgICAgXCJUaGluIG91dCBpbm5lciBjYW5vcHkgc2hvb3RzIHRvIGFsbG93IHdpbmQgYW5kIHN1bmxpZ2h0IHRvIGRldGVyIHN1Y2tpbmcgaW5zZWN0c1wiLFxuICAgICAgXCJCYW5kIHRyZWUgdHJ1bmtzIHdpdGggcG9seXRoZW5lIHNoZWV0cyBhbmQgZ3JlYXNlIHRvIGJsb2NrIGFudCB0cmFuc3BvcnQgb2Ygc2NhbGVzXCJcbiAgICBdLFxuICAgIGFjY2VudENvbG9yOiBcInNsYXRlXCJcbiAgfVxufTtcblxuIl0sIm1hcHBpbmdzIjoiQUFjTyxhQUFNLGlCQUE4QztBQUFBLEVBQ3pELGVBQWU7QUFBQSxJQUNiLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFBQSxFQUNBLG9CQUFvQjtBQUFBLElBQ2xCLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFBQSxFQUNBLGtCQUFrQjtBQUFBLElBQ2hCLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFBQSxFQUNBLFlBQVk7QUFBQSxJQUNWLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFBQSxFQUNBLGNBQWM7QUFBQSxJQUNaLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFBQSxFQUNBLFdBQVc7QUFBQSxJQUNULElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFBQSxFQUNBLGtCQUFrQjtBQUFBLElBQ2hCLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFBQSxFQUNBLGVBQWU7QUFBQSxJQUNiLElBQUk7QUFBQSxJQUNKLE1BQU07QUFBQSxJQUNOLGdCQUFnQjtBQUFBLElBQ2hCLFVBQVU7QUFBQSxJQUNWLFVBQVU7QUFBQSxJQUNWLGFBQWE7QUFBQSxJQUNiLFVBQVU7QUFBQSxNQUNSO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsUUFBUTtBQUFBLE1BQ047QUFBQSxNQUNBO0FBQUEsTUFDQTtBQUFBLElBQ0Y7QUFBQSxJQUNBLFlBQVk7QUFBQSxNQUNWO0FBQUEsTUFDQTtBQUFBLE1BQ0E7QUFBQSxJQUNGO0FBQUEsSUFDQSxZQUFZO0FBQUEsTUFDVjtBQUFBLE1BQ0E7QUFBQSxNQUNBO0FBQUEsSUFDRjtBQUFBLElBQ0EsYUFBYTtBQUFBLEVBQ2Y7QUFDRjsiLCJuYW1lcyI6W119

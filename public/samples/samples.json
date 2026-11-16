@@ -1,0 +1,42 @@
+[
+  {
+    "className": "Anthracnose",
+    "fileName": "anthracnose.jpg",
+    "path": "/samples/anthracnose.jpg"
+  },
+  {
+    "className": "Bacterial Canker",
+    "fileName": "bacterial_canker.jpg",
+    "path": "/samples/bacterial_canker.jpg"
+  },
+  {
+    "className": "Cutting Weevil",
+    "fileName": "cutting_weevil.jpg",
+    "path": "/samples/cutting_weevil.jpg"
+  },
+  {
+    "className": "Die Back",
+    "fileName": "die_back.jpg",
+    "path": "/samples/die_back.jpg"
+  },
+  {
+    "className": "Gall Midge",
+    "fileName": "gall_midge.jpg",
+    "path": "/samples/gall_midge.jpg"
+  },
+  {
+    "className": "Healthy",
+    "fileName": "healthy.jpg",
+    "path": "/samples/healthy.jpg"
+  },
+  {
+    "className": "Powdery Mildew",
+    "fileName": "powdery_mildew.jpg",
+    "path": "/samples/powdery_mildew.jpg"
+  },
+  {
+    "className": "Sooty Mould",
+    "fileName": "sooty_mould.jpg",
+    "path": "/samples/sooty_mould.jpg"
+  }
+]
